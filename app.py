@@ -1,4 +1,4 @@
-import streamlit as st
+streamlit as st
 import pdfplumber
 
 st.set_page_config(page_title="Book Reference Finder", layout="centered")
