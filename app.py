@@ -1,6 +1,5 @@
 import streamlit as st
 import pypdf
-import os
 
 # Set up the web page title
 st.set_page_config(page_title="Book Reference Finder", layout="centered")
@@ -15,7 +14,9 @@ if uploaded_file is not None:
     
     # Read the PDF pages
     pdf_reader = pypdf.PdfReader(uploaded_file)
-    total_pages = len(pdf_reader)
+    
+    # FIX: Correct way to count pages in newer pypdf versions
+    total_pages = len(pdf_reader.pages)
     st.info(f"This PDF segment has {total_pages} pages.")
     
     # Text input for the user's question
