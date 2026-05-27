@@ -6,7 +6,7 @@ st.title("📖 Book Reference Page Finder")
 st.write("Upload a split PDF book segment to find exact reference pages.")
 
 uploaded_file = st.file_uploader("Upload your PDF book part (Max 50MB)", type=["pdf"])
-
+user_query = st.text_input(...)
 if uploaded_file is not None:
     st.success("File uploaded successfully!")
     
